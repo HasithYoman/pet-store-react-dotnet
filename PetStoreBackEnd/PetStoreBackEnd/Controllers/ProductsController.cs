@@ -73,6 +73,8 @@ namespace PetStoreBackEnd.Controllers
             product.Title = dto.Title;
             product.Brand = dto.Brand;
 
+            await _context.SaveChangesAsync();
+
             return Ok("Product Updated Successfully");
 
         }
